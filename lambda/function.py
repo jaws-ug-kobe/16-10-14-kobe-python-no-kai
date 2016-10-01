@@ -30,4 +30,4 @@ def publish_message_to_sns(message):
 	sns_topic_arn = sns.create_topic(Name=SNS_TOPIC).arn
 	
 	response = sns.Topic(sns_topic_arn).publish(Subject="TEXT UPLOADED",Message=message)
-	return response['ResponseMetadata']['HTTPStatusCode']
+  return response['ResponseMetadata']['HTTPStatusCode']
